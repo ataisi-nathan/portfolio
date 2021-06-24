@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+/* To hide contents */
+.hide{
+    visibility: hidden;
+}
+body{
+    background-color: #E8EEE8;
+    width: 100vw;
+    height: 100vh;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+header{
+    background-color: #fff;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 5;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.proSize{
+    font-size: 20px;
+    color: #0690C6;
+    cursor: pointer;
+}
+.prosize{
+    font-size: 16px;
+}
+nav ul li{
+    list-style: none;
+    padding-right: 30px;
+    font-size: 16px;
+}
+nav ul a{
+    color: #000;
+    text-decoration: none;
+}
+nav ul li:hover{
+    color: #0690C6;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+.ham-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+}
+.ham{
+    height: 4px;
+    width: 90%;
+    background-color: black;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-evenly;
+}
+.socials svg{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+}
+.socials svg:hover{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin: 1px;
+    transition: ease-in-out .3s;
+}
+/* This style is for the home page */
+.background{
+    background-image: url('images/grovemade-RvPDe41lYBA-unsplash.jpg');
+    background-size: cover; 
+    width: 100vw;
+    height: 90vh;
+    top: 10vh;
+    position: absolute;
+    filter: brightness(50%);
+}
+.content{
+    color: #fff;
+    position: absolute;
+    left: 5%;
+    bottom: 40%;
+}
+.content h1{
+    font-size: 60px;
+}
+.content p{
+    margin-top: -30px;
+    font-size: 20px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 50px;
+    justify-content: space-evenly;
+}
+button{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border: 2px solid #fff;
+    width: 150px;
+    border-radius: 5px;
+    /* padding: 10px; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}
+button:hover{
+    color: #0690C6;
+    background-color: #fff;
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+button:hover a{
+    color: #0690C6;
+}
+/* The style for the homepage ends here */
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* This is the style for the projects */
+.projects{
+    display: flex;
+    flex-direction: column;
+    height: 1500px;
+    justify-content: space-between;
+    position: absolute;
+    left: 10%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* margin: 0 auto; */
+}
+.project {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+}
+.project h1{
+    font-size: 60px;
+    text-align: center;
+}
+.project div{
+    width: 1000px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.windows{
+    display: flex;
+    flex-direction: row ;
+}
+.pro2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.paragraph{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-left: 70px;
+    width: 500px;
+    height: 300px;
+}
+.paragraph h3{
+    text-align: center;
+}
+.paragraph div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.paragraph div a{
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.paragraph div button{
+    border: 2px solid #0690C6;
+    color: #0690C6;
+    background-color: #fff;
+}
+.paragraph button:hover{
+    background-color: #0690C6;
+    color: #fff;
+    transition: ease-in .3s;
+}
+.windowsImage img{
+    border-radius: 10px;
+    filter: brightness(70%);
+}
+.windowsImage img:hover{
+    filter: brightness(20%);
+    transition: ease-in-out .5s;
+    cursor: pointer;
+}
+/* The style for the project page ends here */
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* This style for the contact page starts here */
+.contact{
+    position:absolute;
+    top: 12vh;
+    width: 100%;
+    padding-left: 3em;
+}
+.contact h1{
+    font-size: 60px;
+    text-align: center;
+}
+.contactMe{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-top: 2em;
+}
+.callMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(6,126,198);
+    background: radial-gradient(circle, rgba(6,126,198,1) 0%, rgba(139,38,211,1) 37%, rgba(59,95,220,1) 65%, rgba(64,73,222,1) 74%, rgba(80,58,229,1) 87%, rgba(141,0,255,1) 100%);
+    border-radius: 10px;
+    border: 2px solid #fff;
+    width: 400px;
+    height: 300px;
+}
+.callMe:hover{
+    background-color: #20315b;
+    cursor: pointer;
+    transition: ease .3s;
+}
+.callMe:hover a{
+    color: #fff;
+}
+.callMe:hover svg{
+    stroke: #fff;
+}
+.callMe a{
+    text-decoration: none;
+    color: #fff;
+}
+.callMe svg{
+    width: 20px;
+    height: 20px;
+    stroke: #fff;
+    fill: none;
+}
+/* The style for the contact page ends here */
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+/* This style is for the About papge */
+/* 
+
+    The code goes in here
+
+*/
+/* The stlye for the about page ends here */
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+/* This style is for the Responsiveness of the page */
+@media screen and (min-width: 500px) {
+    .ham-btn{
+        visibility: hidden;
+    }
+    /* .mobileView{
+        visibility: hidden;
+    } */
+}
+@media screen and (max-width: 500px) {
+    nav{
+        visibility: hidden;
+    }
+    .ham-btn{
+        position: absolute;
+        top: 10px
+        left: 10px;
+    }
+    .socials{
+        position: relative;
+        right: 30px;
+    }
+    .mobileNav{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 7;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobileNav li{
+        font-size: 20px;
+    }
+    .closeBtn{
+        position: absolute;
+        z-index: 9;
+        top: 10px;
+        left: 10px;
+    }
+    .closeBtn svg{
+        width: 25px;
+        height: 25px;
+    }
+}

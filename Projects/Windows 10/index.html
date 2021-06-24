@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <script>
+        function updateTime(){
+            var currentTime = new Date()
+            var hours = currentTime.getHours()
+            var minutes = currentTime.getMinutes()
+            if (minutes < 10){
+                minutes = "0" + minutes
+            }
+            var t_str = hours + ":" + minutes + " ";
+            if(hours > 11){
+                t_str += "PM";
+            } else {
+                t_str += "AM";
+            }
+            document.getElementById('time_span').innerHTML = t_str;
+        }
+    </script>
+    <title>Windows 10 Demo</title>
+</head>
+<body onload="updateTime(); setInterval('updateTime()', 1000)">
+    <section>
+        <div class="desktop">
+            <div class="desktopIcons">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="Assets/Recycle.png" alt="Recycle Bin" width="40px" height="40px">
+                            <p>Recycle Bin</p>
+                        </td>
+                        <td>
+                            <img src="Assets/pse.png" alt="Photoshop" width="40px" height="40px">
+                            <p>Photoshop</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="Assets/Blender.png" alt="Blender" width="40px" height="40px">
+                            <p>Blender</p>
+                        </td>
+                        <td>
+                            <img src="Assets/notebook.svg" alt="Notebook" width="40px" height="40px">
+                            <p>Notebook</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="Assets/computer.png" alt="Computer" width="40px" height="40px">
+                            <p>Shared Folders</p>
+                        </td>
+                        <td>
+                            <img src="Assets/Autodesk.png" alt="AutoDesk" width="40px" height="40px">
+                            <p>AutoDesk</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="Assets/edge_browser_logo_icon_152998.png" alt="Edge Browser" width="40px" height="40px">
+                            <p>Edge Browser</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="Assets/word.svg" alt="Microsoft Word" width="40px" height="40px">
+                            <p>Microsoft Word</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="Assets/Excel.svg" alt="Microsoft Excel" width="40px" height="40px">
+                            <p>Microsoft Excel</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="Assets/powerpoint.svg" alt="Microsoft Powerpoint" width="40px" height="40px">
+                            <p>Powerpoint</p>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <span class="menuPanel hide" id="menuPanel">
+                <span class="leftPanel">
+                    <div>
+                        <div id="fullMenu">
+                            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="userId">
+                            <svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="25" cy="25" fill="none" r="24" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><rect fill="none" height="50" width="50"/><path d="M29.933,35.528  c-0.146-1.612-0.09-2.737-0.09-4.21c0.73-0.383,2.038-2.825,2.259-4.888c0.574-0.047,1.479-0.607,1.744-2.818  c0.143-1.187-0.425-1.855-0.771-2.065c0.934-2.809,2.874-11.499-3.588-12.397c-0.665-1.168-2.368-1.759-4.581-1.759  c-8.854,0.163-9.922,6.686-7.981,14.156c-0.345,0.21-0.913,0.878-0.771,2.065c0.266,2.211,1.17,2.771,1.744,2.818  c0.22,2.062,1.58,4.505,2.312,4.888c0,1.473,0.055,2.598-0.091,4.21c-1.261,3.39-7.737,3.655-11.473,6.924  c3.906,3.933,10.236,6.746,16.916,6.746s14.532-5.274,15.839-6.713C37.688,39.186,31.197,38.93,29.933,35.528z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+                        </div>
+                        <div id="settings">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M293.9,450H233.53a15,15,0,0,1-14.92-13.42l-4.47-42.09a152.77,152.77,0,0,1-18.25-7.56L163,413.53a15,15,0,0,1-20-1.06l-42.69-42.69a15,15,0,0,1-1.06-20l26.61-32.93a152.15,152.15,0,0,1-7.57-18.25L76.13,294.1a15,15,0,0,1-13.42-14.91V218.81A15,15,0,0,1,76.13,203.9l42.09-4.47a152.15,152.15,0,0,1,7.57-18.25L99.18,148.25a15,15,0,0,1,1.06-20l42.69-42.69a15,15,0,0,1,20-1.06l32.93,26.6a152.77,152.77,0,0,1,18.25-7.56l4.47-42.09A15,15,0,0,1,233.53,48H293.9a15,15,0,0,1,14.92,13.42l4.46,42.09a152.91,152.91,0,0,1,18.26,7.56l32.92-26.6a15,15,0,0,1,20,1.06l42.69,42.69a15,15,0,0,1,1.06,20l-26.61,32.93a153.8,153.8,0,0,1,7.57,18.25l42.09,4.47a15,15,0,0,1,13.41,14.91v60.38A15,15,0,0,1,451.3,294.1l-42.09,4.47a153.8,153.8,0,0,1-7.57,18.25l26.61,32.93a15,15,0,0,1-1.06,20L384.5,412.47a15,15,0,0,1-20,1.06l-32.92-26.6a152.91,152.91,0,0,1-18.26,7.56l-4.46,42.09A15,15,0,0,1,293.9,450ZM247,420h33.39l4.09-38.56a15,15,0,0,1,11.06-12.91A123,123,0,0,0,325.7,356a15,15,0,0,1,17,1.31l30.16,24.37,23.61-23.61L372.06,328a15,15,0,0,1-1.31-17,122.63,122.63,0,0,0,12.49-30.14,15,15,0,0,1,12.92-11.06l38.55-4.1V232.31l-38.55-4.1a15,15,0,0,1-12.92-11.06A122.63,122.63,0,0,0,370.75,187a15,15,0,0,1,1.31-17l24.37-30.16-23.61-23.61-30.16,24.37a15,15,0,0,1-17,1.31,123,123,0,0,0-30.14-12.49,15,15,0,0,1-11.06-12.91L280.41,78H247l-4.09,38.56a15,15,0,0,1-11.07,12.91A122.79,122.79,0,0,0,201.73,142a15,15,0,0,1-17-1.31L154.6,116.28,131,139.89l24.38,30.16a15,15,0,0,1,1.3,17,123.41,123.41,0,0,0-12.49,30.14,15,15,0,0,1-12.91,11.06l-38.56,4.1v33.38l38.56,4.1a15,15,0,0,1,12.91,11.06A123.41,123.41,0,0,0,156.67,311a15,15,0,0,1-1.3,17L131,358.11l23.61,23.61,30.17-24.37a15,15,0,0,1,17-1.31,122.79,122.79,0,0,0,30.13,12.49,15,15,0,0,1,11.07,12.91ZM449.71,279.19h0Z"/><path d="M263.71,340.36A91.36,91.36,0,1,1,355.08,249,91.46,91.46,0,0,1,263.71,340.36Zm0-152.72A61.36,61.36,0,1,0,325.08,249,61.43,61.43,0,0,0,263.71,187.64Z"/></g></svg>
+                        </div>
+                        <div id="power">
+                            <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><g><path d="M48,36a5.9966,5.9966,0,0,0,6-6V6A6,6,0,0,0,42,6V30A5.9966,5.9966,0,0,0,48,36Z"/><path d="M76.0078,22.9746a6,6,0,0,0-8.0156,8.93A29.39,29.39,0,0,1,78,54a30,30,0,0,1-60,0A29.39,29.39,0,0,1,28.0078,31.9043a6,6,0,0,0-8.0156-8.93,42.0009,42.0009,0,1,0,56.0156,0Z"/></g></svg>
+                        </div>
+                    </div>
+                </span>
+                <span class="middlePanel">
+                    <div class="suggested">
+                        <p>Suggested</p>
+                        <div>
+                            <span>
+                                <img src="Assets/skype.png" width="40px" height="30px" alt="" srcset="">
+                            </span>
+                            <span>
+                                <p>Skpye</p>
+                                <span><sub>FREE</sub></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="A">
+                        <p>#</p>
+                        <div>
+                            <span>
+                                <img src="Assets/1password.png" alt="1 Password" width="30px" height="30px">
+                            </span>
+                            <span>
+                                <p>1 Password</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="A">
+                        <p>A</p>
+                        <div>
+                            <span>
+                                <img src="Assets/creativeCloud.png" alt="Creative Cloud" width="30px" height="30px">
+                            </span>
+                            <span>
+                                <p>Adobe Creative Cloud</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/pse.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Adobe Photoshop Elements</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/AdobeInfinity.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Affinity Photo</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/afterEffects.png" alt="After Effects" width="60px" height="40px">
+                            </span>
+                            <span>
+                                <p>After Effects</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/AmazonMusic.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Amazon Music</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/apache.png" alt="Apache" width="30px" height="30px">
+                            </span>
+                            <span>
+                                <p>Apache Http Server</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/Audible.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Audible</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/Autodesk.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>AutoDesk</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/Sketchbook.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Autodesk Sketchbook</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="B">    
+                        <p>B</p>
+                        <div>
+                            <span>
+                                <img src="Assets/Blender.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Blender</p>
+                            </span>
+                        </div>   
+                    </div>
+                    <div class="C">
+                        <p>C</p>
+                        <div>
+                            <span><img src="Assets/Chrome.png" alt="google Chrome" width="40px" height="30px"></span>
+                            <span><p>Chrome</p></span>
+                        </div>
+                    </div>    
+                    <div class="D">
+                        <p>D</p>
+                        <div>
+                            <span>
+                                <img src="Assets/dreamWeaver.png" alt="Dreram Weaver" width="30px" height="30px">
+                            </span>
+                            <span>
+                                <p>Dream Weaver</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/drive.png" alt="Drive" width="30px" height="30px">
+                            </span>
+                            <span>
+                                <p>Drive</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/dropbox.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Dropbox</p>
+                            </span>
+                        </div>
+                    </div> 
+                    <div class="A">
+                        <p>E</p>   
+                        <div>
+                            <span>
+                                <img src="Assets/edge_browser_logo_icon_152998.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Edge Browser</p>
+                            </span>
+                        </div>   
+                       <div>
+                            <span>
+                                <img src="Assets/Excel.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Excel</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="A">
+                        <p>F</p>
+                        <div>
+                            <span>
+                                <img src="Assets/firefox.png" alt="Firefox" width="30px" height="30px">
+                            </span>
+                            <span>
+                                <p>Firefox</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="A">
+                        <p>H</p>
+                        <div>
+                            <span>
+                                <img src="Assets/Hulu.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Hulu</p>
+                            </span>
+                        </div>   
+                    </div>
+                    <div class="A">
+                        <p>I</p>    
+                        <div>
+                            <span>
+                                <img src="Assets/illustrator.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Illustrator</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/inDesign.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>InDesign</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/instagram.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Instagram</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="A">
+                        <p>N</p>    
+                        <div>
+                            <span>
+                                <img src="Assets/netflix.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Netflix</p>
+                            </span>
+                        </div>   
+                    </div>
+                    <div class="A">
+                        <p>O</p>    
+                        <div>
+                            <span>
+                                <img src="Assets/Office.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Microsoft Office</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/office2016.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Microsoft Office 2016</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/oneNote.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>OneNote</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/outlook.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Outlook</p>
+                            </span>
+                        </div>   
+                    </div>
+                    <div class="A">
+                        <p>P</p>    
+                        <div>
+                            <span>
+                                <img src="Assets/powerPoint.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Powerpoint</p>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="Assets/premireElements.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Premire Elements</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/premirePro.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Premire Pro</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="A">
+                        <p>S</p>    
+                        <div>
+                            <span>
+                                <img src="Assets/spotify.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Spotify</p>
+                            </span>
+                        </div>   
+                        <div>
+                            <span>
+                                <img src="Assets/steam.png" width="30px" height="30px" alt="">
+                            </span>
+                            <span>
+                                <p>Steam</p>
+                            </span>
+                        </div>
+                    </div>
+                </span>
+                <span class="rightPanel"></span>
+            </span>
+        </div> 
+        <div class="taskBar">
+            <span class="windows" onclick="menuToggle()">
+                <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M202.1,266.7H93.4c-7.4,0-13.4,6.1-13.4,13.7v89c0,6.6,4.6,11.9,10.7,13.2l105.4,21.1l6.9,1.2c7-0.3,12.7-6.4,12.7-13.5   V280.4C215.7,272.7,209.5,266.7,202.1,266.7L202.1,266.7z"/><path d="M418.4,266.7H250.2c-7.4,0-13.4,6.1-13.4,13.7v120.5v0.2c0,5.5,3.3,10.1,7.9,12.2c0.2,0.2,0.2,0.2,0.2,0.2l5.3,1.1   c0.2,0,0.2,0,0.3,0l164.7,32.9c0.2,0.1,0.5,0.3,0.7,0.3c0.1,0,0.2,0,0.3-0.1c0.7,0.4,1.4,0.4,2.1,0.4c7.4,0,13.6-6,13.6-13.5V280.4   C432,272.7,425.8,266.7,418.4,266.7L418.4,266.7z"/><path d="M418.4,64c-0.7,0-1.4,0-2.1,0.4c-0.1-0.1-0.2-0.1-0.3-0.1c-0.2,0-0.5,0.1-0.7,0.3L250.5,97.4c-0.2,0-0.2,0-0.3,0l-5.1,1.1   c0,0-0.2,0-0.4,0.2c-4.6,2.1-7.9,6.9-7.9,12.4v120.5c0,7.6,6,13.7,13.4,13.7h168.2c7.4,0,13.6-6.1,13.6-13.7V77.5   C432,70.1,425.8,64,418.4,64L418.4,64z"/><path d="M203,107l-6.9,1.2L90.7,129.4C84.6,130.7,80,136,80,142.6v89c0,7.6,6,13.7,13.4,13.7h108.8c7.4,0,13.6-6.1,13.6-13.7V120.5   C215.7,113.4,210.1,107.4,203,107L203,107z"/></g></svg>
+            </span>
+            <span class="searchBar">
+                <input type="text" name="corona" id="corona" maxlength="30" placeholder="Ask me anything">
+                <!-- <span class="searchMic">
+                    <svg fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="23"/><line x1="8" x2="16" y1="23" y2="23"/></svg>
+                </span> -->
+            </span>
+            <span class="taskBarIcons">
+                <span>
+                    <img src="Assets/edge_browser_logo_icon_152998.png" height="35px" width="35px" alt="">
+                </span>
+                <span>
+                    <img src="Assets/PngItem_1793019.png" height="35px" width="35px" alt="">
+                </span>
+                <span>
+                    <svg height="256px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" viewBox="0 0 256002 256004" width="256px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css">
+                        <![CDATA[
+                         .fil2 {fill:none}
+                         .fil0 {fill:#2A9DD7}
+                         .fil1 {fill:#FFFFFE}
+                        ]]>
+                       </style></defs><g id="Layer_x0020_1"><path class="fil0" d="M125359 24291c510,2288 689,4705 724,7045l14 916 -841 362c-2993,1292 -6583,2894 -8755,5407 -3201,3702 -3414,9828 -3414,14462l0 9747 -9249 1866 0 -11664c0,-8603 1117,-18186 8450,-23785 3307,-2525 7391,-3983 11280,-5349l1454 -512 337 1505zm17387 -5497c3827,-572 8052,-1019 11913,-595 2914,319 5723,1165 7974,3115 2736,2371 4014,5832 4728,9288 1005,4868 1092,10356 1092,15317l0 5212 -9178 1881 0 -7091c0,-3354 88,-6930 -295,-10256 -230,-1984 -694,-4345 -2083,-5871 -2752,-3019 -9197,-2255 -12749,-1745l-1418 204 -140 -1425c-209,-2146 -529,-4284 -981,-6392l-305 -1426 1442 -216zm-65487 50613l-9247 1839 0 -33509c0,-11282 2681,-21986 12498,-28607 6120,-4128 13717,-5890 20822,-7501 10091,-2289 22933,-3338 30665,5031 6111,6618 7154,17140 7154,25737l0 24611 -9259 1873 0 -27045c0,-3076 -137,-6205 -771,-9221 -424,-2014 -1081,-4011 -2116,-5798 -1736,-3001 -4270,-4935 -7581,-5945 -5035,-1535 -11155,-723 -16174,454 -7069,1658 -15847,4110 -20814,9773 -4178,4765 -5177,11118 -5177,17253l0 31055z"/><polygon class="fil0" points="238216,240296 238216,64412 238216,62502 236408,61844 200601,48819 199135,48701 19988,84521 17784,84962 17784,87207 17784,217498 17784,219742 19988,220183 199135,256004 200601,255887 236408,242864 238216,242206 "/><polygon class="fil1" points="101532,146942 101532,110978 101532,107831 98419,108271 58667,113884 56304,114219 56304,116590 56304,146942 56304,149681 59042,149681 98793,149681 101532,149681 "/><polygon class="fil1" points="108011,110685 108011,146942 108011,149681 110750,149681 160862,149681 163601,149681 163601,146942 163601,103347 163601,100181 160467,100641 110354,107978 108011,108321 "/><polygon class="fil1" points="160862,155798 110750,155798 108011,155798 108011,158537 108011,197448 108011,199812 110354,200154 160467,207481 163601,207939 163601,204775 163601,158537 163601,155798 "/><polygon class="fil1" points="101532,197137 101532,158537 101532,155798 98793,155798 59042,155798 56304,155798 56304,158537 56304,191532 56304,193905 58667,194239 98419,199843 101532,200282 "/></g><rect class="fil2" height="256002" width="256002" y="1"/><!-- Code injected by live-server -->
+                     <script type="text/javascript">
+                         // <![CDATA[  <-- For SVG support
+                         if ('WebSocket' in window) {
+                             (function () {
+                                 function refreshCSS() {
+                                     var sheets = [].slice.call(document.getElementsByTagName("link"));
+                                     var head = document.getElementsByTagName("head")[0];
+                                     for (var i = 0; i < sheets.length; ++i) {
+                                         var elem = sheets[i];
+                                         var parent = elem.parentElement || head;
+                                         parent.removeChild(elem);
+                                         var rel = elem.rel;
+                                         if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                             var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                             elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                                         }
+                                         parent.appendChild(elem);
+                                     }
+                                 }
+                                 var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                                 var address = protocol + window.location.host + window.location.pathname + '/ws';
+                                 var socket = new WebSocket(address);
+                                 socket.onmessage = function (msg) {
+                                     if (msg.data == 'reload') window.location.reload();
+                                     else if (msg.data == 'refreshcss') refreshCSS();
+                                 };
+                                 if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                                     console.log('Live reload enabled.');
+                                     sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                                 }
+                             })();
+                         }
+                         else {
+                             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+                         }
+                         // ]]>
+                     </script></svg>
+                </span>
+                <span></span>
+            </span>
+            <span class="taskBarControl">
+                <span>
+                    <svg id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+                        .st0{fill:#ffffff;}
+                    </style><g><g id="Icon-Chevron-Left" transform="translate(237.000000, 335.000000)"><polyline class="st0" id="Fill-35" points="-218.7,-308.6 -216.7,-310.6 -205,-298.8 -193.3,-310.6 -191.3,-308.6 -205,-294.9      -218.7,-308.6    "/></g></g></svg>
+                </span>
+                <span>
+                    <svg id="Layer_1" style="enable-background:new 0 0 30 30;" version="1.1" viewBox="0 0 30 30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M24,21H4  c-1.105,0-2-0.895-2-2v-9c0-1.105,0.895-2,2-2h20c1.105,0,2,0.895,2,2v9C26,20.105,25.105,21,24,21z" style="fill:#000;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-miterlimit:20;"/><path d="M29,17h-1v-5h1c0.552,0,1,0.448,1,1v3C30,16.552,29.552,17,29,17z"/><rect height="7" width="12" x="5" y="11"/></svg>
+                </span>
+                <span>
+                    <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31,23H1a1,1,0,0,1-1-1V10A1,1,0,0,1,1,9H31a1,1,0,0,1,1,1V22A1,1,0,0,1,31,23ZM2,21H30V11H2Z"/><path d="M28,20H26a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2Z"/><path d="M28,17H27a1,1,0,0,1,0-2h1a1,1,0,0,1,0,2Z"/><path d="M6,20H4a1,1,0,0,1,0-2H6a1,1,0,0,1,0,2Z"/><path d="M5,17H4a1,1,0,0,1,0-2H5a1,1,0,0,1,0,2Z"/><path d="M23,20H9a1,1,0,0,1,0-2H23a1,1,0,0,1,0,2Z"/><path d="M28,14a1,1,0,0,1-.38-.08,1.15,1.15,0,0,1-.33-.21,1,1,0,0,1-.21-1.09,1.15,1.15,0,0,1,.21-.33A1,1,0,0,1,29,13a1,1,0,0,1-.29.71,1.15,1.15,0,0,1-.33.21A1,1,0,0,1,28,14Z"/><path d="M25,14a1,1,0,0,1-.92-1.38,1.15,1.15,0,0,1,.21-.33l.15-.12a.76.76,0,0,1,.18-.09.6.6,0,0,1,.19-.06,1,1,0,0,1,.9.27A1.05,1.05,0,0,1,26,13a1,1,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,25,14Z"/><path d="M22,14a1,1,0,0,1-.38-.08.9.9,0,0,1-.54-.54A.84.84,0,0,1,21,13a1.05,1.05,0,0,1,.29-.71,1,1,0,0,1,.33-.21A1,1,0,0,1,22.2,12a.64.64,0,0,1,.18.06.76.76,0,0,1,.18.09l.15.12A1.05,1.05,0,0,1,23,13a.84.84,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,22,14Z"/><path d="M19,14a1,1,0,0,1-.38-.08,1.15,1.15,0,0,1-.33-.21A1,1,0,0,1,18,13a1,1,0,1,1,2,0,.84.84,0,0,1-.08.38.9.9,0,0,1-.54.54A1,1,0,0,1,19,14Z"/><path d="M16,14a1,1,0,0,1-.92-1.38,1.15,1.15,0,0,1,.21-.33,1,1,0,0,1,1.42,0,1.15,1.15,0,0,1,.21.33A1,1,0,0,1,16,14Z"/><path d="M13,14a1,1,0,0,1-.92-1.38,1.15,1.15,0,0,1,.21-.33,1,1,0,0,1,1.42,0,1.15,1.15,0,0,1,.21.33A1,1,0,0,1,13,14Z"/><path d="M10,14a1,1,0,0,1-.92-1.38,1.15,1.15,0,0,1,.21-.33l.15-.12.18-.09L9.8,12a1,1,0,0,1,.91.27A1.05,1.05,0,0,1,11,13a1,1,0,0,1-1,1Z"/><path d="M7,14a1,1,0,0,1-.71-.29,1.15,1.15,0,0,1-.21-.33A1,1,0,0,1,6,13a1,1,0,0,1,1.71-.71A1.05,1.05,0,0,1,8,13a.84.84,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,7,14Z"/><path d="M24,17a1,1,0,0,1-.71-.29,1.15,1.15,0,0,1-.21-.33.94.94,0,0,1,0-.76,1.15,1.15,0,0,1,.21-.33,1,1,0,0,1,.33-.21,1,1,0,0,1,1.09.21A1.05,1.05,0,0,1,25,16a.84.84,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,24,17Z"/><path d="M21,17a1,1,0,0,1-.71-.29,1.15,1.15,0,0,1-.21-.33.94.94,0,0,1,0-.76.9.9,0,0,1,.54-.54,1,1,0,0,1,.76,0,.93.93,0,0,1,.33.21A1.05,1.05,0,0,1,22,16a.84.84,0,0,1-.08.38.9.9,0,0,1-.54.54A1,1,0,0,1,21,17Z"/><path d="M18,17a1,1,0,0,1-.38-.08.9.9,0,0,1-.54-.54A.84.84,0,0,1,17,16a1.05,1.05,0,0,1,.29-.71.93.93,0,0,1,.33-.21,1,1,0,0,1,.76,0,.9.9,0,0,1,.54.54.94.94,0,0,1,0,.76,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,18,17Z"/><path d="M14,17a1,1,0,0,1-.71-.29,1.15,1.15,0,0,1-.21-.33A.84.84,0,0,1,13,16a1.05,1.05,0,0,1,.29-.71.93.93,0,0,1,.33-.21,1,1,0,0,1,.76,0,.9.9,0,0,1,.54.54.94.94,0,0,1,0,.76,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,14,17Z"/><path d="M11,17a1,1,0,0,1-.71-.29,1.15,1.15,0,0,1-.21-.33.94.94,0,0,1,0-.76.9.9,0,0,1,.54-.54,1,1,0,0,1,1.09.21A1.05,1.05,0,0,1,12,16a.84.84,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,11,17Z"/><path d="M8,17a1,1,0,0,1-.71-.29,1.15,1.15,0,0,1-.21-.33.94.94,0,0,1,0-.76,1.15,1.15,0,0,1,.21-.33,1,1,0,0,1,.33-.21,1,1,0,0,1,.76,0,1,1,0,0,1,.33.21A1.05,1.05,0,0,1,9,16a1,1,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,8,17Z"/><path d="M4,14a1,1,0,0,1-.38-.08,1.15,1.15,0,0,1-.33-.21A1,1,0,0,1,3,13a1.05,1.05,0,0,1,.29-.71A1,1,0,0,1,4.2,12l.18.06.18.09a1.58,1.58,0,0,1,.15.12A1.05,1.05,0,0,1,5,13a.84.84,0,0,1-.08.38,1.15,1.15,0,0,1-.21.33A1,1,0,0,1,4,14Z"/></svg>
+                </span>
+                <span id="time">
+                    
+                </span>
+                <span id="desktop"></span>
+            </span>
+        </div>
+    </section>
+
+    <script src="Script/app.js"></script>
+</body>
+</html>
