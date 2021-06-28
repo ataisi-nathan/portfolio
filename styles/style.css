@@ -216,6 +216,8 @@ button:hover a{
     transition: ease-in .3s;
 }
 .windowsImage img{
+    width: 500px;
+    height: 300px;
     border-radius: 10px;
     filter: brightness(70%);
 }
@@ -241,7 +243,7 @@ button:hover a{
 }
 .contactMe{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: space-evenly;
     padding-top: 2em;
@@ -252,11 +254,14 @@ button:hover a{
     justify-content: center;
     align-items: center;
     background: rgb(6,126,198);
-    background: radial-gradient(circle, rgba(6,126,198,1) 0%, rgba(139,38,211,1) 37%, rgba(59,95,220,1) 65%, rgba(64,73,222,1) 74%, rgba(80,58,229,1) 87%, rgba(141,0,255,1) 100%);
     border-radius: 10px;
     border: 2px solid #fff;
-    width: 400px;
-    height: 300px;
+    width: 250px;
+    height: 50px;
+}
+.contactCards{
+    display: flex;
+    flex-direction: row;
 }
 .callMe:hover{
     background-color: #20315b;
@@ -267,7 +272,7 @@ button:hover a{
     color: #fff;
 }
 .callMe:hover svg{
-    stroke: #fff;
+    stroke: #fff;   
 }
 .callMe a{
     text-decoration: none;
@@ -276,8 +281,6 @@ button:hover a{
 .callMe svg{
     width: 20px;
     height: 20px;
-    stroke: #fff;
-    fill: none;
 }
 /* The style for the contact page ends here */
 
@@ -303,6 +306,7 @@ button:hover a{
     } */
 }
 @media screen and (max-width: 500px) {
+    /* this style is for the mobile navigations */
     nav{
         visibility: hidden;
     }
@@ -337,5 +341,84 @@ button:hover a{
     .closeBtn svg{
         width: 25px;
         height: 25px;
+    }
+    .mobileView{
+        z-index: 9;
+    }
+    /* this style is for the mobile project  */
+    .windows, .pro2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .project div{
+        width: 300px;
+    }
+    .windowsImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .windowsImage img{
+        width: 250px;
+        height: 150px;
+        border-radius: 10px;
+        filter: brightness(70%);
+    }
+    .windowsImage img:hover{
+        filter: brightness(20%);
+        transition: ease-in-out .5s;
+        cursor: pointer;
+    }
+    .paragraph{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .paragraph p{
+        margin-left: 0;
+    }
+    .paragraph div{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .paragraph div a{
+        text-decoration: none;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .paragraph div button{
+        border: 2px solid #0690C6;
+        color: #0690C6;
+        background-color: #fff;
+    }
+    /* This syle is for the mobile Contact page */
+    .contactMe{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .callMe{
+        display: flex;
+        height: 50px;
+        width: 70%;
+        background: #0690C6;
+    }
+    .callMe a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactCards{
+        width: 100%;
     }
 }
