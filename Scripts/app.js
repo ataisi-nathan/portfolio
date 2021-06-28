@@ -37,7 +37,7 @@ function project(){
                     <h3>Windows 10 Online Emulator</h3>
                     <p>This project is an inspiration of the Microsoft windows 10 Operating System. It was just a personal project, I just wanted to have my on Windows 10 emulator online and that was how this project came to life.</p>
                     <div>
-                        <a href="#"><button>Visit Site</button></a>
+                        <a href="../Projects/Windows10/index.html"><button>Visit Site</button></a>
                         <a href="#"><button>Open Git</button></a>
                     </div>
                 </span>
