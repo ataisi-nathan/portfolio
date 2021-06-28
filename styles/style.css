@@ -109,7 +109,6 @@ nav ul li:hover{
 .content p{
     /* margin-top: -30px; */
     font-size: 20px;
-    color: black;
 }
 .buttons{
     display: flex;
