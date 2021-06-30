@@ -18,6 +18,8 @@ body{
 }
 ::-webkit-scrollbar{
     display: none;
+    width: 0;
+    background: transparent;
 }
 header{
     background-color: #fff;
@@ -313,7 +315,7 @@ button:hover a{
     }
     .ham-btn{
         position: absolute;
-        top: 10px
+        top: 10px;
         left: 10px;
     }
     .socials{
