@@ -29,12 +29,13 @@ section{
 }
 /* Taskbar Position */
 .taskBar{
-    position: relative;
+    position: fixed;
+    width: 100%;
+    padding: 1px;
     height: 6vh;
     background-color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 39px 25% auto 250px;
     bottom: 0;
 }
 /* Windows Button Icon  */
@@ -45,15 +46,15 @@ section{
     background-color:rgb(28, 36, 85);
 }
 .windows svg{
-    width: 37px;
-    height: 37px;
+    width: 2em;
+    height: 2em;
     fill: #fff;
 }
 .searchBar input{
-    height: 40px;
+    height: 2em;
     font-size: 16px;
     padding: 5px;
-    width:  25em;
+    width:  100%;
 }
 /* .searchMic{
     position: absolute;
@@ -71,16 +72,20 @@ section{
     margin-left: 10px;
     margin-right: 3px;
 }
+.taskBarIcons img{
+    height: 1.8em;
+    width: 1.8em;
+}
 .taskBarIcons svg{
-    height: 35px;
-    width: 35px;
+    height: 1.8em;
+    width: 1.8em;
     fill: #fff;
 }
 .taskBarControl{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 250px;
+    /* width: 250px; */
     position: absolute;
     right: 0;
 }
@@ -200,4 +205,7 @@ td{
 }
 td:active{
     background-color: rgba(137, 43, 226, 0.397);
+}
+@media screen and {
+    
 }
